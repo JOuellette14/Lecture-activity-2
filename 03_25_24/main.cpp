@@ -11,6 +11,8 @@ int main()
     product p(prodNum, 3.99, descript);
     product r(prodNum + "b");
     product s(prodNum + "s", 8.99, "This product", 12, 20, 3);
+    iceCream i(CHOCOLATE_CHIP, 3);
+    std::cout << i.tostring() << std::endl;
     std::cout << p.tostring() << std::endl;
     drink d(COFFEE, HOT, LARGE, "Skim Milk", "Brown Sugar");
     std::cout << d.tostring() << std::endl;
