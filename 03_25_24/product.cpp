@@ -298,6 +298,7 @@ double iceCream::scoopPricing(int scoops)
     }
     return 0.0;
 }
+
 int iceCream::prodNum = 1;
 iceCream::iceCream(flavorType flavor, int scoopAmount) : product("Ice Cream", scoopPricing(scoopAmount), "I" + std::to_string(prodNum++))
 {
@@ -306,19 +307,32 @@ iceCream::iceCream(flavorType flavor, int scoopAmount) : product("Ice Cream", sc
     purchase();
 }
 
-void iceCream::setScoopAmount(int)
+flavorType iceCream::getFlavor() const
 {
-    if (scoopAmount < 0)
-        {
-            scoopAmount = 1;
-        }
+    return flavor;
 }
+
+int iceCream::getScoopAmount() const
+{
+    return scoopAmount;
+}
+
+void iceCream::setFlavor(flavorType)
+{
+    this->flavor = flavor;
+}
+
+void iceCream::setScoopAmount(int scoopAmount)
+{
+    this->scoopAmount = scoopAmount;
+}
+
 std::string iceCream::tostring()
 {
     std::ostringstream out;
     out << std::setprecision(2) << std::fixed << std::showpoint;
-    out << setScoopAmount() << " scoops of " << std::endl;
-    out << setFlavor() << std::endl;
+    out << scoopAmount << " scoops of " << std::endl;
+    out << flavor << std::endl;
     out << " - " << product::tostring();
     return out.str();
 }

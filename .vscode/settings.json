@@ -49,5 +49,6 @@
         "compare": "cpp",
         "concepts": "cpp",
         "numbers": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
