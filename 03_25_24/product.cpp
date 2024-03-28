@@ -317,7 +317,7 @@ int iceCream::getScoopAmount() const
     return scoopAmount;
 }
 
-void iceCream::setFlavor(flavorType)
+void iceCream::setFlavor(flavorType flavor)
 {
     this->flavor = flavor;
 }

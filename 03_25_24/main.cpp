@@ -17,7 +17,7 @@ int main()
     drink myDrink(TEA, ICE, SMALL, "none", "none", "Small Iced Tea", "tea1234");
     std::cout << myDrink.tostring() << std::endl;
     std::cout << myDrink.getDescription() << std::endl;
-    iceCream myiceCream(CHOCOLATE_CHIP, 1);
+    iceCream myiceCream(CHOCOLATE_FUDGE_BROWNIE, 1);
     std::cout << myiceCream.tostring() << std::endl;
 
     return 0;
